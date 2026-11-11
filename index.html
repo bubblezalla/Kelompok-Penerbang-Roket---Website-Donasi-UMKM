@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KawanUMKM - Platform Crowdfunding UMKM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>kawanUMKM</h1>
+        <nav>
+            <ul>
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#tentang">Tentang Kami</a></li>
+                <li><a href="#katalog-alat">Katalog Alat Usaha</a></li>
+                <li><a href="#pengajuan">Pengajuan Bantuan</a></li>
+                <li><a href="#transparansi">Transparansi</a></li>
+                <li><a href="#laporan-dampak">Laporan Dampak</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <section id="beranda">
+        <h2>Bantu UMKM Lokal Dapatkan Fasilitas Produksi Layak</h2>
+        <p>Platform crowdfunding (kawanumkm.id) yang ditujukan untuk pelaku UMKM dengan keterbatasan modal dan alat usaha agar mendapatkan fasilitas produksi yang lebih layak.</p>
+        <a href="#katalog-alat">
+            <button type="button">Dukung UMKM Sekarang</button>
+        </a>
+        <a href="#pengajuan">
+            <button type="button">Ajukan Bantuan Alat</button>
+        </a>
+    </section>
+
+    <hr>
+
+    <section id="tentang">
+        <h2>Deskripsi Singkat Platform</h2>
+        <p>KawanUMKM adalah wadah crowdfunding yang menjembatani UMKM dengan para donatur dan investor untuk pengadaan alat usaha spesifik demi meningkatkan kapasitas dan perkembangan usaha lokal.</p>
+    </section>
+
+    <hr>
+
+    <section id="katalog-alat">
+        <h2>1. Katalog Bantuan Alat Usaha & Galang Dana</h2>
+        <p>Daftar kebutuhan alat produksi spesifik (equipment wishlist) dari pelaku UMKM yang membutuhkan dukungan dana atau investasi:</p>
+
+        <br>
+
+        <article>
+            <h3>Mesin Espresso Komersial 2 Group</h3>
+            <p><strong>UMKM Pengaju:</strong> Kedai Kopi Dusun</p>
+            <p><strong>Deskripsi Kebutuhan:</strong> Meningkatkan kapasitas produksi dari 50 cangkir menjadi 200 cangkir/hari.</p>
+            <p><strong>Jenis Skema Dukungan:</strong> Donasi (Hibah) / Investasi Mikro (Bagi Hasil 5%/bulan)</p>
+            <p><strong>Target Dana:</strong> Rp12.000.000</p>
+            <p><strong>Terkumpul:</strong> Rp8.500.000</p>
+            <form action="#" method="POST">
+                <label for="skema1">Pilih Skema Dukungan:</label>
+                <select id="skema1" name="skema">
+                    <option value="donasi">Donasi (Hibah)</option>
+                    <option value="investasi">Investasi Bagi Hasil (Revenue Sharing)</option>
+                </select>
+                <input type="number" placeholder="Nominal Rp" required>
+                <button type="submit">Dukung Alat Ini</button>
+            </form>
+        </article>
+        
+        <br>
+
+        <article>
+            <h3>Mesin Jahit High Speed & Obras Industri</h3>
+            <p><strong>UMKM Pengaju:</strong> Konveksi Batik Tulis Sejahtera</p>
+            <p><strong>Deskripsi Kebutuhan:</strong> Mempercepat penyelesaian pesanan seragam dan pakaian batik.</p>
+            <p><strong>Jenis Skema Dukungan:</strong> Donasi (Hibah) / Investasi Mikro (Bagi Hasil 4%/bulan)</p>
+            <p><strong>Target Dana:</strong> Rp7.500.000</p>
+            <p><strong>Terkumpul:</strong> Rp3.000.000</p>
+            <form action="#" method="POST">
+                <label for="skema2">Pilih Skema Dukungan:</label>
+                <select id="skema2" name="skema">
+                    <option value="donasi">Donasi (Hibah)</option>
+                    <option value="investasi">Investasi Bagi Hasil (Revenue Sharing)</option>
+                </select>
+                <input type="number" placeholder="Nominal Rp" required>
+                <button type="submit">Dukung Alat Ini</button>
+            </form>
+        </article>
+    </section>
+
+    <hr>
+
+    <section id="pembayaran-qris">
+    <h2>Pembayaran & Donasi via QRIS</h2>
+    <p>Bantu UMKM lebih cepat, instan, dan bebas biaya admin dengan QRIS Standar Nasional.</p>
+
+    <br>
+
+    <form action="#" method="POST">
+        <div>
+            <label for="pilih_umkm">Pilih UMKM / Alat yang Didukung:</label><br>
+            <select id="pilih_umkm" name="pilih_umkm" required>
+                <option value="">-- Pilih UMKM Penerima --</option>
+                <option value="kopi_dusun">Kedai Kopi Dusun (Mesin Espresso)</option>
+                <option value="batik_sejahtera">Konveksi Batik Tulis Sejahtera (Mesin Jahit)</option>
+                <option value="umum">Donasi Umum / Kas Platform KawanUMKM</option>
+            </select>
+        </div>
+
+        <br>
+
+        <div>
+            <label for="skema_qris">Skema Dukungan:</label><br>
+            <select id="skema_qris" name="skema_qris">
+                <option value="donasi">Donasi (Hibah)</option>
+                <option value="investasi">Investasi Bagi Hasil (Revenue Sharing)</option>
+            </select>
+        </div>
+
+        <br>
+
+        <div>
+            <label for="nominal_qris">Nominal Dukungan (Rp):</label><br>
+            <input type="number" id="nominal_qris" name="nominal_qris" placeholder="Contoh: 50000" min="10000" required>
+        </div>
+
+        <br>
+
+        <div>
+            <h3>Scan Kode QRIS KawanUMKM</h3>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://kawanumkm.id/pay/qris-official" alt="QRIS Resmi KawanUMKM">
+            <p><strong>Mendukung:</strong> GoPay, OVO, DANA, ShopeePay, LinkAja, BCA, Mandiri, BRI, BNI, dan e-Wallet / Mobile Banking lainnya.</p>
+        </div>
+
+        <br>
+
+        <button type="submit">Konfirmasi Telah Membayar</button>
+    </form>
+</section>
+
+    <hr>
+
+    <section id="pengajuan">
+        <h2>Pengajuan Bantuan Alat Usaha (Untuk UMKM)</h2>
+        <p>Ajukan kebutuhan alat produksi spesifik usaha Anda melalui formulir di bawah ini:</p>
+
+        <br>
+
+        <form action="#" method="POST">
+            <div>
+                <label for="nama_pemilik">Nama Pemilik Usaha:</label><br>
+                <input type="text" id="nama_pemilik" name="nama_pemilik" placeholder="Masukkan nama lengkap" required>
+            </div>
+
+            <br>
+
+            <div>
+                <label for="nama_usaha">Nama Usaha / Toko:</label><br>
+                <input type="text" id="nama_usaha" name="nama_usaha" placeholder="Masukkan nama usaha" required>
+            </div>
+
+            <br>
+
+            <div>
+                <label for="alat_dibutuhkan">Nama & Spesifikasi Alat Usaha (Equipment Wishlist):</label><br>
+                <input type="text" id="alat_dibutuhkan" name="alat_dibutuhkan" placeholder="Contoh: Mesin Obras Industri Brand X" required>
+            </div>
+
+            <br>
+
+            <div>
+                <label for="skema_diajukan">Pilihan Skema Pendanaan:</label><br>
+                <select id="skema_diajukan" name="skema_diajukan">
+                    <option value="donasi">Donasi / Hibah</option>
+                    <option value="investasi">Investasi Bagi Hasil (Revenue Sharing)</option>
+                    <option value="keduanya">Terima Keduanya</option>
+                </select>
+            </div>
+
+            <br>
+
+            <div>
+                <label for="estimasi_biaya">Estimasi Biaya Alat (Rp):</label><br>
+                <input type="number" id="estimasi_biaya" name="estimasi_biaya" placeholder="Masukkan total nominal" required>
+            </div>
+
+            <br>
+
+            <div>
+                <label for="whatsapp">Nomor WhatsApp / Kontak:</label><br>
+                <input type="tel" id="whatsapp" name="whatsapp" placeholder="08xxxxxxxxxx" required>
+            </div>
+
+            <br>
+
+            <div>
+                <label for="alasan">Alasan & Dampak Penambahan Alat Terhadap Usaha:</label><br>
+                <textarea id="alasan" name="alasan" rows="4" cols="50" placeholder="Jelaskan bagaimana alat ini membantu meningkatkan produksi usaha Anda..."></textarea>
+            </div>
+
+            <br>
+
+            <button type="submit">Kirim Pengajuan Bantuan</button>
+        </form>
+    </section>
+
+    <hr>
+
+    <section id="transparansi">
+        <h2>3. Transparansi & Pembelian Alat Langsung</h2>
+        <p>Dana disalurkan secara langsung dalam bentuk pengadaan barang/alat produksi untuk menjaga akuntabilitas publik.</p>
+
+        <br>
+
+        <table border="1" cellpadding="8" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Nama UMKM</th>
+                    <th>Alat Dibelikan</th>
+                    <th>Status Pengadaan</th>
+                    <th>Bukti Pembelian / Nota</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Kerajinan Bambu Jaya</td>
+                    <td>Mesin Pemotong Bambu Otomatis</td>
+                    <td>Selesai Dibeli & Diterima</td>
+                    <td><a href="#">Lihat Invois & Foto Alat</a></td>
+                </tr>
+                <tr>
+                    <td>Kerupuk Ikan Barokah</td>
+                    <td>Kuali Besar & Mesin Press Plastik</td>
+                    <td>Dalam Proses Pengiriman</td>
+                    <td><a href="#">Lihat Bukti Resi & Transaksi</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <hr>
+
+    <section id="laporan-dampak">
+        <h2>4. Laporan Perkembangan & Dampak (Impact Reporting)</h2>
+        <p>Pembaharuan berkala mengenai penggunaan alat dan perkembangan usaha UMKM kepada donatur/investor:</p>
+
+        <br>
+
+        <article>
+            <h3>Laporan Dampak: Kerajinan Bambu Jaya</h3>
+            <p><strong>Tanggal Pembaharuan:</strong> Oktober 2026</p>
+            <p><strong>Perkembangan:</strong> Setelah mendapatkan Mesin Pemotong Bambu Otomatis, waktu produksi berkurang hingga 60%. Omzet bulanan meningkat sebesar 35% dan berhasil menambah 2 tenaga kerja lokal.</p>
+            <p><strong>Status Bagi Hasil (Investor):</strong> Pembayaran imbal hasil bulan ke-3 telah ditransfer tepat waktu.</p>
+        </article>
+
+        <br>
+
+        <article>
+            <h3>Laporan Dampak: Kedai Kopi Dusun</h3>
+            <p><strong>Tanggal Pembaharuan:</strong> September 2026</p>
+            <p><strong>Perkembangan:</strong> Alat pengering biji kopi berhasil dipasang. Kualitas hasil sangrai meningkat dan siap masuk ke pasar swalayan daerah.</p>
+        </article>
+    </section>
+
+    <hr>
+
+    <section id="daftar">
+        <h2>Daftar & Bergabung dengan KawanUMKM</h2>
+        <p>Isi formulir di bawah ini untuk menjadi bagian dari komunitas KawanUMKM, baik sebagai pelaku UMKM yang membutuhkan dukungan maupun sebagai donatur/investor yang ingin membantu.</p>
+
+        <br>
+
+        <form action="#" method="POST">
+            <div>
+                <label for="nama">Nama Lengkap:</label><br>
+                <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+            </div>
+
+            <br>
+
+            <div>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="Masukkan email aktif" required>
+            </div>
+
+            <br>
+
+            <div>
+                <label for="peran">Peran Anda:</label><br>
+                <select id="peran" name="peran">
+                    <option value="umkm">Pelaku UMKM</option>
+                    <option value="donatur">Donatur / Investor</option>
+                </select>
+            </div>
+
+            <br>
+
+            <button type="submit">Daftar Sekarang</button>
+        </form>
+    </section>
+    
+    <section id="kontak">
+        <h2>Hubungi Kami</h2>
+        <p>Email: 43050250027@student.uinsalatiga.ac.id</p>
+        <p>Telepon / WhatsApp: +62 857-0072-0825</p>
+        <p>Alamat: Jalan Siranda Raya no. 12 Salatiga, Indonesia</p>
+    </section>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2026 KawanUMKM (kawanumkm.id). Dibuat untuk Mendukung Usaha Lokal Indonesia.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
